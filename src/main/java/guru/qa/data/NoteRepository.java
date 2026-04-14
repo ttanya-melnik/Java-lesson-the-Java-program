@@ -6,6 +6,7 @@ import java.util.Collections;
 import java.util.List;
 
 public interface NoteRepository {
+
   List<Note> findAllByUsername(String username);
 
   void save(Note note);
@@ -13,9 +14,9 @@ public interface NoteRepository {
   class MockNoteRepository implements NoteRepository {
 
     private List<Note> store = new ArrayList<>(
-            List.of(
-                    new Note("dima", "Выучи автоматизацию наконец!"),
-                    new Note("dima", "Начни меньше работать!")
+        List.of(
+            new Note("dima", "Выучи автоматизацию наконец!"),
+            new Note("dima", "Начни меньше работать!")
         )
     );
 

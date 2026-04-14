@@ -7,7 +7,7 @@ import guru.qa.service.Session;
 import guru.qa.service.UserSession;
 import java.util.Optional;
 import javax.swing.JOptionPane;
-import javax.swing.*;
+
 
 public class LoginUIComponent implements UIComponent{
 
@@ -35,7 +35,7 @@ public class LoginUIComponent implements UIComponent{
       return render(session);
     }
     User fromRepository = optionalUser.get();
-    if (!fromRepository.isPasswordEqual(
+    if (!fromRepository.isPasswordEquals(
         passwordEncoder.encode(password))) {
       showError();
       return render(session);

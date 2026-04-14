@@ -12,21 +12,20 @@ import java.nio.file.Path;
 
 
 public class Main {
-    public static void main(String[] args) {
-        new UIContainer(
-          new LoginUIComponent(
-              new FileUserRepository(
+  public static void main(String[] args) {
+    new UIContainer(
+        new LoginUIComponent(
+            new FileUserRepository(
                 Path.of("users.csv")
             ),
-              new Base64PasswordEncoder()
+            new Base64PasswordEncoder()
         ),
-          new MainUIComponent(
-              new NoteRepository.MockNoteRepository()
+        new MainUIComponent(
+            new NoteRepository.MockNoteRepository()
         )
     ).render(
-          new Session.EmptySession()
+        new Session.EmptySession()
     );
   }
-
   }
 
