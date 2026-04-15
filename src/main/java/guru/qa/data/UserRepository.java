@@ -10,10 +10,10 @@ public interface UserRepository {
   class MockUserRepository implements UserRepository {
     @Override
     public Optional<User> findByUsername(String username) {
-      if ("dima".equals(username)) {
+      if ("Tanya".equals(username)) {
         return Optional.of(
             new User(
-                "dima",
+                "Tanya",
                 "12345"
             )
         );

@@ -1,6 +1,5 @@
 package guru.qa.service;
 
-import java.nio.charset.StandardCharsets;
 import java.util.Base64;
 import static java.nio.charset.StandardCharsets.UTF_8;
 

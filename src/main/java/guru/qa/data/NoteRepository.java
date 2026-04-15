@@ -15,14 +15,14 @@ public interface NoteRepository {
 
     private List<Note> store = new ArrayList<>(
         List.of(
-            new Note("dima", "Выучи автоматизацию наконец!"),
-            new Note("dima", "Начни меньше работать!")
+            new Note("Tanya", "Выучи автоматизацию наконец!"),
+            new Note("Tanya", "Начни меньше работать!")
         )
     );
 
     @Override
     public List<Note> findAllByUsername(String username) {
-      if ("dima".equals(username)) {
+      if ("Tanya".equals(username)) {
         return store;
       }
       return Collections.emptyList();
@@ -30,7 +30,7 @@ public interface NoteRepository {
 
     @Override
     public void save(Note note) {
-      if ("dima".equals(note.username())) {
+      if ("Tanya".equals(note.username())) {
         store.add(note);
       }
     }
