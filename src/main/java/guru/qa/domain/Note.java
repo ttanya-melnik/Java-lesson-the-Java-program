@@ -1,5 +1,12 @@
 package guru.qa.domain;
 
+
+/* Пакет guru.qa.domain — сущности
+
+Note.java
+Заметка. Состоит из имени пользователя и текста.
+  */
+
 public class Note {
 
   private final String username;

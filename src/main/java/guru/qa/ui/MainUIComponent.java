@@ -7,6 +7,27 @@ import guru.qa.service.Session;
 import java.util.List;
 import javax.swing.JOptionPane;
 
+
+/* Пакет guru.qa.ui — пользовательский интерфейс
+MainUIComponent.java — главный экран
+
+
+После успешного логина запускается этот класс.
+Что делает:
+
+Берёт пользователя из сессии: session.unwrap()
+Загружает все его заметки.
+Показывает их в окне.
+Спрашивает новую заметку.
+Сохраняет её.
+Спрашивает "Продолжить?" → если да, то рекурсивно вызывает сам себя.
+
+Здесь используется рекурсия вместо цикла — простой, но не самый лучший способ для больших приложений.
+
+              */
+
+
+
 public class MainUIComponent implements UIComponent{
 
   private final NoteRepository noteRepository;

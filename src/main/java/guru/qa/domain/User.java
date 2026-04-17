@@ -1,5 +1,11 @@
 package guru.qa.domain;
 
+
+/* Пакет guru.qa.domain — сущности
+   Простой класс с именем и паролем.
+ */
+
+
 public class User {
 
   private final String username;

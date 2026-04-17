@@ -9,6 +9,24 @@ import java.util.Optional;
 import javax.swing.JOptionPane;
 
 
+/* Пакет guru.qa.ui — пользовательский интерфейс
+LoginUIComponent.java — экран входа
+
+
+
+Самый важный файл для понимания.
+Что происходит:
+
+Показывает два окна ввода: username и password.
+Ищет пользователя в репозитории.
+Проверяет пароль (через PasswordEncoder).
+Если всё плохо — показывает ошибку и рекурсивно вызывает render() заново.
+Если всё хорошо — возвращает UserSession.
+
+ */
+
+
+
 public class LoginUIComponent implements UIComponent{
 
   private final UserRepository userRepository;
@@ -29,6 +47,7 @@ public class LoginUIComponent implements UIComponent{
         "password: "
     );
 
+    // Optional — это безопасная обёртка, которая говорит: "может быть пользователь, а может и нет".
     Optional<User> optionalUser = userRepository.findByUsername(username);
     if (optionalUser.isEmpty()) {
       showError();

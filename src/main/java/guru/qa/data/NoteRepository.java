@@ -5,6 +5,13 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+
+/* Хранилище заметок.
+MockNoteRepository хранит заметки в обычном ArrayList в памяти.                                      */
+
+
+
+
 public interface NoteRepository {
 
   List<Note> findAllByUsername(String username);

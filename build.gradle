@@ -11,7 +11,7 @@ repositories {
 }
 
 dependencies {
-    implementation 'com.opencsv:opencsv:5.12.0'
+    implementation 'com.opencsv:opencsv:5.12.0' // Подключена библиотека opencsv для чтения csv
     testImplementation platform('org.junit:junit-bom:5.10.0')
     testImplementation 'org.junit.jupiter:junit-jupiter:6.0.3'
 }

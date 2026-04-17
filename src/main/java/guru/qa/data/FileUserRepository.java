@@ -10,6 +10,17 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.Optional;
 
+/* Пакет guru.qa.data — работа с данными
+    Repository = хранилище данных.
+
+MockUserRepository — для тестов (жёстко прописан пользователь Tanya).
+FileUserRepository — читает пользователей из файла users.csv.
+
+Используется библиотека OpenCSV для чтения CSV.
+    */
+
+
+
 public class FileUserRepository implements UserRepository{
   private final Path path;
 
